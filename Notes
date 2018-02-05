@@ -1,0 +1,32 @@
+Make application externally available:
+
+You can read more for the
+configuration here
+http://cppcms.com/wikipp/en/page/cppcms_1x_config#service
+
+Your config.js should look
+something like this:
+
+{
+   "service": {
+     "list": [
+       {"ip":
+"127.0.0.1", "api": "http",
+"port": 8080},
+   
+   {"ip": "192.168.0.104",
+"api": "http", "port":
+8080},
+     ]
+   },
+ 
+"http": {
+   
+"script_names": ["/app.fcgi"]
+  },
+ 
+"file_server" : {
+   
+"enable": true,
+  }
+}
