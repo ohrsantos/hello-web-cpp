@@ -18,8 +18,8 @@ void my_hello_world::main(std::string /*url*/)
     response().out()<<
         "<html>\n"
    "<head>"
-        "<title>Provérbios</title><meta charset="utf-8">"
-        "<meta charset="utf-8">"
+        "<title>Provérbios</title><meta charset=\"utf-8\">"
+        "<meta charset=\"utf-8\">"
         "<!-- Latest compiled and minified CSS --> "
         "<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">"
         "<!-- jQuery library --> "
