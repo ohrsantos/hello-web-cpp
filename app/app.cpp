@@ -17,7 +17,7 @@ void my_hello_world::main(std::string /*url*/)
 {
     response().out()<<
         "<html>\n"
-   <head>
+   "<head>"
         "<title>Provérbios</title><meta charset="utf-8">"
         "<meta charset="utf-8">"
         "<!-- Latest compiled and minified CSS --> "
