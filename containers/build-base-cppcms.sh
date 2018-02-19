@@ -1,4 +1,4 @@
-docker build -f Dockerfile.base-cppcms  -t ohrsan/base-cppcms:latest .
+docker build -f containers/Dockerfile.base-cppcms  -t ohrsan/base-cppcms:latest .
 
 docker login -u=ohrsan -p=bomdia01
 
