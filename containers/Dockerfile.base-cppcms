@@ -6,6 +6,7 @@ WORKDIR /opt/cppcms/build
 RUN cmake ..
 RUN make
 RUN make install
+RUN rm -rf /opt/cppcms/build
 WORKDIR /var/www
 EXPOSE 8080
 #CMD ["/bin/bash"]
