@@ -6,4 +6,4 @@ IP=$(ip addr  | grep -E "([0-9]{1,3}\.){3}[0-9]{1,3}" | grep -v 127.0.0.1 | awk 
 sed -i -e "s/CONTAINER_IP/$IP/g" config.js
 
 date
-./app -c config.js 
+LD_LIBRARY_PATH=/usr/local/lib/ ./app -c config.js 
