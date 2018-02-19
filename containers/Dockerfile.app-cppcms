@@ -2,7 +2,8 @@ FROM ohrsan/base-cppcms:latest
 MAINTAINER Orlando Hehl Rebelo dos Santos
 ENV APP_ENV=DEV
 COPY  .  /var/www
-WORKDIR /var/www/app
+WORKDIR /var/www
 RUN make app
-ENTRYPOINT [ "app", "-c", "config.js"]
+ENTRYPOINT launch.sh
+#ENTRYPOINT [ "app", "-c", "config.js"]
 EXPOSE 8080
