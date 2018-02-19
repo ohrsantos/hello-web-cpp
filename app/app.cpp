@@ -62,7 +62,7 @@ void my_hello_world::main(std::string /*url*/)
             "<p class=\"navbar-text\" style=\"font-family:Sans-serif;float:right\"> Horário UTC:  <span style=\"color:gray\"> <%= Date() %> </span></p>"
           "</div>"
         "</nav>"
-        "  <h1>Hello World!!</h1>\n"
+        "  <h1>Hello World... Up and Running!!</h1>\n"
         "</body>\n"
         "</html>\n";
 }
