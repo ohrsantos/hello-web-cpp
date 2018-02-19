@@ -3,5 +3,6 @@ MAINTAINER Orlando Hehl Rebelo dos Santos
 ENV APP_ENV=DEV
 COPY  .  /var/www
 WORKDIR /var/www/app
+RUN make app
 ENTRYPOINT [ "app", "-c", "config.js"]
 EXPOSE 8080
