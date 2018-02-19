@@ -4,6 +4,6 @@ ENV APP_ENV=DEV
 COPY  .  /var/www
 WORKDIR /var/www
 RUN make app
-ENTRYPOINT launch.sh
+ENTRYPOINT /var/www/launch.sh
 #ENTRYPOINT [ "app", "-c", "config.js"]
 EXPOSE 8080
