@@ -25,7 +25,7 @@ echo ">>>> deploy-${APP_ENV} v:0.01a"
 
 function stop_container {
     echo ">>>> Parando container app-cppcms-${APP_ENV} ..."
-    if docker stop -t3 app-cppcms${APP_ENV}; then
+    if docker stop -t3 app-cppcms-${APP_ENV}; then
         echo ">>>> Container parado com sucesso!"
     fi
 }
@@ -50,7 +50,7 @@ function build_img {
 
 function run_container {
     echo ">>>> Inicializando container app-cppcms-${APP_ENV} $HOST:$APP_PORT"
-    docker run -d  --rm -p $APP_PORT:8080 --name app-cppcms${APP_ENV} ohrsan/app-cppcms:latest || exit 3
+    docker run -d  --rm -p $APP_PORT:8080 --name app-cppcms-${APP_ENV} ohrsan/app-cppcms:latest || exit 3
     #Env variables not implemented yet
     #docker run -d  --rm -e APP_ENV -e PUBLIC_DNS -p $APP_PORT:8080   --name app-cppcms${APP_ENV} ohrsan/app-cppcms:latest || exit 3
 }
