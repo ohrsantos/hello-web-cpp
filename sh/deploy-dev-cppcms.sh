@@ -88,7 +88,13 @@ case $action in
         run_container
         run_tests
         stop_container
-        if [[ $TESTS == FAILED ]]; then exit 50; fi
+        if [[ $TESTS == FAILED ]]; then
+            exit 50
+        else
+            docker login -u=ohrsan -p=bomdia01
+
+            docker push ohrsan/app-cppcms:latest
+        fi
         ;;
     *)
          echo "Opcao \"$action\"... invalida!"
