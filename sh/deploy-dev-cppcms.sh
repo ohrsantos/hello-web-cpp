@@ -16,7 +16,7 @@ DATE_END="20-02-2018"
 action=$(echo ${1} | tr '[:lower:]' '[:upper:]')
 
 export APP_ENV=$(echo ${2} | tr '[:lower:]' '[:upper:]')
-export HOST=$(curl http://169.254.169.254/latest/meta-data/public-ipv4)
+export HOST=$(curl http://169.254.169.254/latest/meta-data/public-ipv4 2>/dev/null)
 export PUBLIC_DNS=$HOST
 
 APP_PORT=${3}
@@ -24,7 +24,7 @@ APP_PORT=${3}
 echo ">>>> deploy-${APP_ENV} v:0.01a"
 
 function stop_container {
-    echo ">>>> Parando container app-cppcms${APP_ENV} ..."
+    echo ">>>> Parando container app-cppcms-${APP_ENV} ..."
     if docker stop -t3 app-cppcms${APP_ENV}; then
         echo ">>>> Container parado com sucesso!"
     fi
@@ -49,7 +49,7 @@ function build_img {
 }
 
 function run_container {
-    echo ">>>> Inicializando container app-cppcms${APP_ENV} $HOST:$APP_PORT"
+    echo ">>>> Inicializando container app-cppcms-${APP_ENV} $HOST:$APP_PORT"
     docker run -d  --rm -p $APP_PORT:8080 --name app-cppcms${APP_ENV} ohrsan/app-cppcms:latest || exit 3
     #Env variables not implemented yet
     #docker run -d  --rm -e APP_ENV -e PUBLIC_DNS -p $APP_PORT:8080   --name app-cppcms${APP_ENV} ohrsan/app-cppcms:latest || exit 3
