@@ -59,7 +59,7 @@ void my_hello_world::main(std::string /*url*/)
               "<li><a href=\"http://aws-alb-lab-942269274.us-east-1.elb.amazonaws.com:4444\"> Prod </a></li>"
             "</ul>"
             "<p class=\"navbar-text\" style=\"font-family:Sans-serif;color:white\"> CppCMS Lab v:0.00.003</p>"
-            "<p class=\"navbar-text\" style=\"font-family:Sans-serif;float:right\"> Horário UTC:  <span style=\"color:gray\"> <%= Date() %> </span></p>"
+            "<p class=\"navbar-text\" style=\"font-family:Sans-serif;float:right\"> Horário UTC:  <span style=\"color:gray\">   </span></p>"
           "</div>"
         "</nav>"
         "  <h1>Hello World... Up and Running!!</h1>\n"
