@@ -6,7 +6,7 @@ SCRIPT_NAME="is-server-up"
 VERSION="0.021a"
 AUTHOR="Orlando Hehl Rebelo dos Santos"
 DATE_INI="23-01-2018"
-DATE_END="03-02-2018"
+DATE_END="20-02-2018"
 ################################################################################
 #Changes:
 #
@@ -48,7 +48,9 @@ done
 shift $(($OPTIND - 1))
 
 if curl ${HOST}:${PORT} >/dev/null 2>&1; then
+   echo ">>>> Service up and running!"
    exit 0
 else
+   echo ">>>> Could not connect to service!"
    exit 1
 fi
