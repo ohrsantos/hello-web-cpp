@@ -1,4 +1,4 @@
-FROM ohrsan/base-cppcms:latest
+FROM ohrsan/base-cppcms:2
 MAINTAINER Orlando Hehl Rebelo dos Santos
 ENV APP_ENV=DEV
 COPY  .  /var/www
